@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ashu ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Comic Sans MS', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #E6E6FA, #D8BFD8);
+      color: #4B0082;
+    }
+    #enterBtn {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #9370DB;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="text"></div>
+  <button id="enterBtn">💜 Enter Our Universe 💜</button>
+
+  <script>
+    const textEl = document.getElementById('text');
+    const btn = document.getElementById('enterBtn');
+    const message = "Welcome to our little universe...";
+
+    let i = 0;
+    function typeWriter() {
+      if(i < message.length) {
+        textEl.innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+      } else {
+        btn.style.display = "block";
+      }
+    }
+    typeWriter();
+
+    btn.addEventListener('click', () => {
+      alert("Next page coming soon! 💜");
+    });
+  </script>
+</body>
+</html>
